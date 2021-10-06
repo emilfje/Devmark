@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/blue"
+        android:gravity="bottom"
+        android:padding="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:maxLength="30"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_button_white_search"
+            android:textColorHint="@color/blue"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createPost"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_button_white_search"
+            android:text="@string/create_post"
+            android:textColor="@color/blue"
+            android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tagsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_bg_white_linear"
+        android:layout_below="@+id/searchLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp">
+
+        <TextView
+            android:id="@+id/tagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:layout_marginBottom="9dp"
+            android:text="@string/tags"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/SQL"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tagText"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_background_color="@color/black"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_size="20dp"
+            app:isw_default_selection="left"
+            app:isw_icon_right="@drawable/mysql"
+            app:isw_icon_left="@drawable/logout"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/csharp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/SQL"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_right="@drawable/csharp"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/java"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/csharp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_right="@drawable/java"
+            app:isw_icon_left="@drawable/logout"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/javascript"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/SQL"
+            android:layout_below="@+id/tagText"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/javascript"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/html"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/SQL"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/javascript"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/html"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/python"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/SQL"
+            android:layout_below="@+id/html"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/python"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/cPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/javascript"
+            android:layout_below="@+id/tagText"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/cplus"/>
+
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/cLanguage"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/javascript"
+            android:layout_below="@+id/cPlus"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/c"/>
+
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/swift"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/javascript"
+            android:layout_below="@+id/cLanguage"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/swift"/>
+
+        <com.polyak.iconswitch.IconSwitch
+            android:id="@+id/css"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/cPlus"
+            android:layout_below="@+id/tagText"
+            android:textColor="@color/black"
+            app:isw_icon_size="20dp"
+            app:isw_thumb_color_left="@color/blue"
+            app:isw_default_selection="left"
+            app:isw_inactive_tint_icon_right="@color/white"
+            app:isw_icon_left="@drawable/logout"
+            app:isw_icon_right="@drawable/css"/>
+
+            <com.polyak.iconswitch.IconSwitch
+                android:id="@+id/php"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/cPlus"
+                android:layout_below="@+id/css"
+                android:textColor="@color/black"
+                app:isw_icon_size="20dp"
+                app:isw_thumb_color_left="@color/blue"
+                app:isw_default_selection="left"
+                app:isw_inactive_tint_icon_right="@color/white"
+                app:isw_icon_left="@drawable/logout"
+                app:isw_icon_right="@drawable/php"/>
+
+            <com.polyak.iconswitch.IconSwitch
+                android:id="@+id/R"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/cPlus"
+                android:layout_below="@+id/php"
+                android:textColor="@color/black"
+                app:isw_icon_size="20dp"
+                app:isw_thumb_color_left="@color/blue"
+                app:isw_default_selection="left"
+                app:isw_inactive_tint_icon_right="@color/white"
+                app:isw_icon_left="@drawable/logout"
+                app:isw_icon_right="@drawable/r"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below = "@+id/tagsLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags = "enterAlways"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/grey"
+            android:scrollbarSize="5dp"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
